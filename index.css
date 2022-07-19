@@ -1,0 +1,355 @@
+body{
+    background-color: aqua;
+}
+
+.clock_display{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cont {
+    margin:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: auto;
+    
+  }
+  /* clock */
+  
+  .clock {
+    border-radius: 100%;
+    background: #ffffff;
+    font-family: "Montserrat";
+    border: 5px solid white;
+    box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrap {
+    overflow: hidden;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+  }
+  
+  .minute,
+  .hour {
+    position: absolute;
+    height: 100px;
+    width: 6px;
+    margin: auto;
+    top: -29%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .minute {
+    position: absolute;
+    height: 130px;
+    width: 4px;
+    top: -38%;
+    left: 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    transform: rotate(90deg);
+  }
+  
+  .second {
+    position: absolute;
+    height: 90px;
+    width: 2px;
+    margin: auto;
+    top: -26%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 4px;
+    background: #FF4B3E;
+    transform-origin: bottom center;
+    transform: rotate(180deg);
+    z-index: 1;
+  }
+  
+  .dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    background: white;
+    border: 2px solid #1b1b1b;
+    border-radius: 100px;
+    margin: auto;
+    z-index: 1;
+  }
+  .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 12px;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    margin: auto;
+    z-index: 1;
+    
+    /* transform-origin: 0rem 0rem; */
+  }
+  .indicator:nth-of-type(1){
+      transform: rotate(30deg) translatex(10rem);
+ }
+  .indicator:nth-of-type(2){
+    transform: rotate(60deg) translatex(10rem);
+}
+.indicator:nth-of-type(3){
+    transform: rotate(90deg) translatex(10rem);
+}
+.indicator:nth-of-type(4){
+    transform: rotate(120deg) translatex(10rem);
+}
+.indicator:nth-of-type(5){
+    transform: rotate(150deg) translatex(10rem);
+}
+.indicator:nth-of-type(6){
+    transform: rotate(180deg) translatex(10rem);
+}
+.indicator:nth-of-type(7){
+    transform: rotate(210deg) translatex(10rem);
+}
+.indicator:nth-of-type(8){
+    transform: rotate(240deg) translatex(10rem);
+}
+
+.indicator:nth-of-type(9){
+    transform: rotate(270deg) translatex(10rem);
+}
+.indicator:nth-of-type(10){
+    transform: rotate(300deg) translatex(10rem);
+}
+.indicator:nth-of-type(11){
+    transform: rotate(330deg) translatex(10rem);
+}
+.indicator:nth-of-type(12){
+    transform: rotate(360deg) translatex(10rem);
+}
+
+
+
+/* date */
+.datecont1{
+    background: red;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px 5px 0 0 ;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+
+.datecont2{
+    background: white;
+    width: 200px;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+}
+.datecont1>h4{
+    padding: 3px;
+    margin: 0px; 
+}
+.datecont2>h4,h1,h3{
+    padding: 3px;
+    margin: 0px; 
+}
+.foldcont{
+    margin: auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.foldcont>div{
+    display: flex;
+    flex-direction: column;
+}
+.fold{
+    background: #000;
+    transform: translatey(34px);
+    border-radius: 40%;
+    height: 40px;
+    width: 10px;
+    z-index: 2;
+    
+}
+.foldhole{
+    content: "";
+    display: block;
+    height: 12px;
+    width: 15px;
+    border-radius: 100%;
+    background: white;
+    border:solid 2px rgb(228, 216, 216);
+    transform: translate(-2.8px, 24px);
+    z-index: 0;
+    
+}
+/* time */
+.time{
+    background: #000;
+    border: white solid 4px;
+    color: white;
+    margin-top: 20px;
+    
+}
+
+/* alarm */
+form{
+    margin: 30px;
+    width: 50%;
+}
+.form{
+    border: #000 solid 5px !important;
+}
+.alarmHead{
+    font-size: 40px;
+}
+.alarmText{
+    font-size: 25px;
+    
+}
+select, input{
+    height: 2rem;
+    text-align: center;
+    border-radius: 0.3rem;
+    border: #000 solid 2px ;
+    padding: 3px;
+    margin: auto 5px;
+}
+fieldset>div{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px auto;
+}
+fieldset>div>div{
+    display: flex;
+    align-items: center;
+    width: -webkit-fill-available;
+    max-width: 580px;
+}
+fieldset>div>div>div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+textarea{
+    height: 180px;
+    width: 580px;
+    margin: 5px;
+    border: black solid 3px;
+    border-radius: 0.6rem;
+    line-height:170px ;
+    font-size: 20px;
+    text-align: center;
+    
+}
+/* card */
+.cardDate{
+    float: right;
+}
+/* alarmBtn */
+.alarmBtn{
+    width: 150px;
+    font-size: 20px;
+    margin-bottom:20px ;
+}
+.alarmDisplay{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.alarmDisplayHead{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 60px;
+    border-bottom: #000 solid 2px;
+}
+.card-body>div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.overlay {
+    background-color:#EFEFEF;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    opacity: .5; /* in FireFox */ 
+    
+}
+.stopButton {
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+@media (min-width: 1000px){
+    
+}
+@media (max-width: 1000px) and (min-width:570px){
+    .clock_display{
+        flex-direction: column;
+    }
+    #form{
+        width: auto;
+    }
+}
+@media (min-width:375px) and (max-width:570px){
+    .clock_display{
+        flex-direction: column;
+    }
+    #form{
+        width: auto;
+    }
+    .setTime {
+        display: block;
+    }
+}
+@media (max-width:375px){
+    .clock_display{
+        flex-direction: column;
+    }
+    #form{
+        width: auto;
+    }
+    .setTime {
+        display: block;
+    }
+    .alarmText{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    .cardDate{
+        display: block;
+    }
+}
